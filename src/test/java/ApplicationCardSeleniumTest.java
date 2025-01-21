@@ -37,7 +37,7 @@ public class ApplicationCardSeleniumTest {
     }
 
     @Test
-    void ValidDataTest() {
+    void validDataTest() {
         driver.findElement(By.cssSelector("[type='text']")).sendKeys("Петров Петр Петрович");
         driver.findElement(By.cssSelector("[type='tel']")).sendKeys("+79991234567");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
@@ -47,7 +47,7 @@ public class ApplicationCardSeleniumTest {
     }
 
     @Test
-    void InvalidNameSurnameTest1() {
+    void invalidNameSurnameTest1() {
         driver.findElement(By.cssSelector("[type='text']")).sendKeys("Petrov");
         driver.findElement(By.cssSelector("[type='tel']")).sendKeys("+79991234567");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
@@ -57,7 +57,7 @@ public class ApplicationCardSeleniumTest {
     }
 
     @Test
-    void InvalidNameSurnameTest2() {
+    void invalidNameSurnameTest2() {
         driver.findElement(By.cssSelector("[type='text']")).sendKeys("");
         driver.findElement(By.cssSelector("[type='tel']")).sendKeys("+79991234567");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
@@ -67,7 +67,7 @@ public class ApplicationCardSeleniumTest {
     }
 
     @Test
-    void EmptyCheckbox() {
+    void emptyCheckbox() {
         driver.findElement(By.cssSelector("[type='text']")).sendKeys("Николаев-Николаев Николай");
         driver.findElement(By.cssSelector("[type='tel']")).sendKeys("+79991234567");
         driver.findElement(By.cssSelector(".button__text")).click();
@@ -76,7 +76,7 @@ public class ApplicationCardSeleniumTest {
     }
 
     @Test
-    void InvalidPhoneTest1() {
+    void invalidPhoneTest1() {
         driver.findElement(By.cssSelector("[type='text']")).sendKeys("Николаев-Николаев Николай");
         driver.findElement(By.cssSelector("[type='tel']")).sendKeys("");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
@@ -86,7 +86,7 @@ public class ApplicationCardSeleniumTest {
     }
 
     @Test
-    void InvalidPhoneTest2() {
+    void invalidPhoneTest2() {
         driver.findElement(By.cssSelector("[type='text']")).sendKeys("Николаев-Николаев Николай");
         driver.findElement(By.cssSelector("[type='tel']")).sendKeys("89991234567");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
